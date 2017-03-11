@@ -1,0 +1,11 @@
+<div class="container">
+  <p>
+    birthday works!
+  </p>
+  <p> hero birthday is on 
+    <!--<div *ngIf="showHobbies">-->
+   {{ birthday | date:'d' | bDate }} 
+    
+    of 
+    {{ birthday | date: 'MMMM' }}.</p>
+</div>
