@@ -2,10 +2,8 @@
   <p>
     birthday works!
   </p>
-  <p> hero birthday is on 
+  <p> hero's birthday is on
     <!--<div *ngIf="showHobbies">-->
-   {{ birthday | date:'d' | bDate }} 
-    
-    of 
-    {{ birthday | date: 'MMMM' }}.</p>
+    {{ birthday | date:'d' }}<sup>{{ birthday | date:'d' | bDate }} </sup> of {{ birthday | date: 'MMMM' }}.
+  </p>
 </div>

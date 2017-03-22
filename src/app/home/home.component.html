@@ -1,6 +1,34 @@
 <div class="container">
   <p>
-  home works!
+    home works!
   </p>
-</div>
 
+
+
+  <form [formGroup]="form"  class="form1">
+    
+      <div class="form-group">
+        <input formControlName="first" placeholder="First" class="form-control" required>
+        <!--
+        <div *ngIf="form.controls['name'].controls['first'].hasError('required') && form.controls['name'].controls['first'].touched" class="alert alert-danger"> First name required. </div>
+        <div *ngIf="form.controls['name'].controls['first'].hasError('minlength')" class="alert alert-danger"> minLength 2 required. </div>-->
+        <div *ngIf="formErrors.first" class="alert alert-danger">
+          {{ formErrors.first }}
+        </div>
+      </div>
+      <div class="form-group">
+        <input formControlName="last" placeholder="Last" class="form-control">
+      </div>
+    
+    <div class="form-group">
+      <input formControlName="email" placeholder="Email" class="form-control" required>
+      <div *ngIf="formErrors.email" class="alert alert-danger">
+          {{ formErrors.email}}
+      </div>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+  </form>
+  <p>Value: {{ form.value | json }}</p>
+  <p>Validation status: {{ form.status }}</p>
+</div>

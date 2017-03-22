@@ -6,7 +6,7 @@ import "rxjs/add/operator/map";
 export class PostsService {
 
   constructor(private http: Http){
-        //console.log('posts servcie')
+        
     }
     getPosts(){
         return this.http.get('http://jsonplaceholder.typicode.com/posts').map(res => res.json())

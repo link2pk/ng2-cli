@@ -13,6 +13,6 @@ export class BirthdayComponent implements OnInit {
   ngOnInit() {
   }
 
-  birthday = new Date(1988, 2, 1);
+  birthday = new Date(1988, 2, 5);
   
 }

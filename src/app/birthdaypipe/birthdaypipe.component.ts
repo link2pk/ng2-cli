@@ -12,21 +12,21 @@ export class BirthdaypipeComponent implements PipeTransform {
 
     if (value == 11 || value == 12 || value == 13) {
      
-      returnValue = value + 'th';
+      returnValue = `th`;
     } else {
       switch (num) {
 
         case 1:
-          returnValue = value + 'st'
+          returnValue = 'st'
           break;
         case 2:
-          returnValue = value + 'nd'
+          returnValue = 'nd'
           break;
         case 3:
-          returnValue = value + 'rd'
+          returnValue = 'rd'
           break;
         default:
-          returnValue = value + 'th'
+          returnValue = 'th'
           break;
       }
     }

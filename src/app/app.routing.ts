@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { TodoComponent } from './todo/todo.component';
 import { BirthdayComponent } from './birthday/birthday.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const appRoutes: Routes = [
  
@@ -39,7 +40,13 @@ const appRoutes: Routes = [
       path: '',
       component: BirthdayComponent
     }
-  ] }
+  ] },
+  { path: '', component:  NavComponent, children : [
+    {
+      path: '**',
+      component: PagenotfoundComponent
+    }
+  ]  }
    
 ];
 

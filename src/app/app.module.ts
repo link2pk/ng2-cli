@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+//import { Ng2BootstrapModule } from 'ng2-bootstrap';
+//import { na } from 'ng2-bootstrap/ng2-bootstrap';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { NavComponent } from './nav/nav.component';
 import { TodoComponent } from './todo/todo.component';
 import { BirthdayComponent } from './birthday/birthday.component';
 import { BirthdaypipeComponent } from './birthdaypipe/birthdaypipe.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ControlMessagesComponent } from './control-messages/control-messages.component';
 
 
 
@@ -25,13 +28,18 @@ import { BirthdaypipeComponent } from './birthdaypipe/birthdaypipe.component';
     NavComponent,
     TodoComponent,
     BirthdayComponent,
-    BirthdaypipeComponent
+    BirthdaypipeComponent,
+    PagenotfoundComponent,
+    ControlMessagesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    
+    ReactiveFormsModule,
     HttpModule,
     routing
+   // Ng2BootstrapModule.forRoot()
+   //AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
